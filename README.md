@@ -7,7 +7,7 @@ This starterkit is based on:
 * [Serverless](https://serverless.com/ "Serverless - The Serverless Application Framework powered by AWS Lambda and API Gateway")
     * [Serverless Offline Plugin](https://github.com/dherault/serverless-offlin://github.com/dherault/serverless-offline "Serverless Offline Plugin")
     * [Serverless Webpack](https://github.com/elastic-coders/serverless-webpack "elastic-coders/serverless-webpack: Serverless plugin to bundle your lambdas with Webpack")
-* [Webpack](http://webpack.github.io/ "webpack")
+* [Webpack3](https://webpack.js.org/ "webpack")
 * [Babel](https://babeljs.io/ "Babel · The compiler for writing next generation JavaScript")
 
 ## Installation
