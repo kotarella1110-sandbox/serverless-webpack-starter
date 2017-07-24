@@ -105,6 +105,7 @@ typings/
 # Ignore build directory
 .serverless
 .webpack
+/env.js
 
 ### Windows ###
 # Windows thumbnail cache files

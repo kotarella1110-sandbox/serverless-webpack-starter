@@ -23,6 +23,9 @@ plugins:
 
 custom:
   defaultStage: dev
+  serverless-offline:
+    host: ${file(./env.js):devServer.host}
+    port: ${file(./env.js):devServer.port}
   webpackIncludeModules: true
 
 provider:
