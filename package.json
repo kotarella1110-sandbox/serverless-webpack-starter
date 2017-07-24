@@ -25,5 +25,7 @@
     "webpack-glob-entry": "^2.1.1",
     "webpack-node-externals": "^1.6.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  }
 }
