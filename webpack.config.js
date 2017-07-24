@@ -1,8 +1,9 @@
 const path = require('path');
+const globEntry = require('webpack-glob-entry');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: path.join(__dirname, 'functions/handler.js'),
+  entry: globEntry(globEntry.basePath(path.resolve(__dirname, 'functions')), path.resolve(__dirname, 'functions/**/handler.js')),
   target: 'node',
   externals: [nodeExternals()],
   module: {
@@ -17,5 +18,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js'],
+  },
+  output: {
+    libraryTarget: 'commonjs',
+    path: path.resolve(__dirname, '.webpack'),
+    filename: '[name].js'
   },
 };
