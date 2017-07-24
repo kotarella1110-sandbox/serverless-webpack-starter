@@ -23,10 +23,10 @@ plugins:
 
 custom:
   defaultStage: dev
+  webpackIncludeModules: true
   serverless-offline:
     host: ${file(./env.js):devServer.host}
     port: ${file(./env.js):devServer.port}
-  webpackIncludeModules: true
 
 provider:
   name: aws
