@@ -85,6 +85,20 @@ functions:
           path: hello
           method: get
           cors: ${self:custom.cors, "true"}
+  first:
+    handler: first/handler.hello
+    events:
+      - http:
+          path: first
+          method: get
+          cors: ${self:custom.cors, "true"}
+  second:
+    handler: second/handler.hello
+    events:
+      - http:
+          path: second
+          method: get
+          cors: ${self:custom.cors, "true"}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
