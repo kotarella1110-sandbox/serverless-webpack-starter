@@ -46,12 +46,6 @@ Open the URL shown in your browser.
 $ yarn build
 ```
 
-## Lint
-
-```bash
-$ yarn lint
-```
-
 ## Deploy
 
 ### Development
