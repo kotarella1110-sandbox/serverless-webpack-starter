@@ -27,6 +27,18 @@ custom:
   serverless-offline:
     host: ${file(./env.js):devServer.host}
     port: ${file(./env.js):devServer.port}
+  cors:
+    origins:
+      - '*'
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Amz-Security-Token
+      - X-Requested-With
+      - X-Requested-By
+    allowCredentials: false
 
 provider:
   name: aws
@@ -72,7 +84,7 @@ functions:
       - http:
           path: hello
           method: get
-          cors: true
+          cors: ${self:custom.cors, "true"}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
