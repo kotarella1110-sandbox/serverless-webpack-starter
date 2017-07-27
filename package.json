@@ -7,7 +7,7 @@
   "author": "Kotaro Sugawara <kotarella1110@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "cp env.example.js env.js",
+    "postinstall": "cp env.example.yml env.yml",
     "start": "sls offline -l .webpack",
     "build": "sls webpack",
     "deploy": "sls deploy",

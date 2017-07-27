@@ -25,9 +25,7 @@ custom:
   defaultStage: dev
   webpack: webpack/${self:provider.stage}.config.js
   webpackIncludeModules: true
-  serverless-offline:
-    host: ${file(./env.js):devServer.host}
-    port: ${file(./env.js):devServer.port}
+  serverless-offline: ${file(./env.yml):serverless-offline}
   cors:
     origins:
       - '*'
