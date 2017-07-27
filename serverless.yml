@@ -23,6 +23,7 @@ plugins:
 
 custom:
   defaultStage: dev
+  webpack: webpack/${self:provider.stage}.config.js
   webpackIncludeModules: true
   serverless-offline:
     host: ${file(./env.js):devServer.host}
