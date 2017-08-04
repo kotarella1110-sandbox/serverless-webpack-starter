@@ -1,9 +1,9 @@
 const path = require('path');
-const globEntry = require('webpack-glob-entry');
+const slsw = require("serverless-webpack");
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: globEntry(globEntry.basePath('./functions'), './functions/**/handler.js'),
+  entry: slsw.lib.entries,
   target: 'node',
   externals: [nodeExternals()],
   module: {
@@ -19,7 +19,7 @@ module.exports = {
     extensions: ['.js'],
   },
   output: {
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, '../.webpack'),
     filename: '[name].js',
   },

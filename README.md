@@ -60,6 +60,20 @@ $ yarn deploy
 $ yarn deploy:prod
 ```
 
+## Single Function Deploy
+
+### Development
+
+```bash
+$ yarn deploy:func -- --function functionName
+```
+
+### Production
+
+```bash
+$ yarn deploy:func:prod -- --function functionName
+```
+
 ## License
 
 MIT

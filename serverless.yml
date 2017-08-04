@@ -78,21 +78,21 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: functions/handler.hello
     events:
       - http:
           path: hello
           method: get
           cors: ${self:custom.cors, "true"}
   first:
-    handler: first/handler.hello
+    handler: functions/first/handler.hello
     events:
       - http:
           path: first
           method: get
           cors: ${self:custom.cors, "true"}
   second:
-    handler: second/handler.hello
+    handler: functions/second/handler.hello
     events:
       - http:
           path: second
