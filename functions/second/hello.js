@@ -1,15 +1,18 @@
 export const hello = async (event, context, callback) => {
-  const response = new Promise(resolve => resolve({
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-      'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
-    },
-    body: JSON.stringify({
-      message: `Go Serverless v1.0! Your function executed successfully! ${process.env.NODE_ENV} stage! Second module!`,
-      input: event,
-    }),
-  }));
+  const response = new Promise(resolve =>
+    resolve({
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+        'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+      },
+      body: JSON.stringify({
+        message: `Go Serverless v1.0! Your function executed successfully! ${process
+          .env.NODE_ENV} stage! Second module!`,
+        input: event,
+      }),
+    })
+  );
 
   callback(null, await response);
 
