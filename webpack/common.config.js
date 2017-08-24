@@ -12,9 +12,20 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'eslint-loader',
+          options: {
+            fix: true,
+          },
+        }],
+        enforce: 'pre',
       },
-    ]
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
   },
   resolve: {
     extensions: ['.js'],

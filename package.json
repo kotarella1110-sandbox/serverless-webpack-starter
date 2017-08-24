@@ -8,23 +8,34 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "cp env.example.yml env.yml",
+    "precommit": "lint-staged",
     "start": "sls offline",
     "build": "sls webpack",
     "build:prod": "sls webpack --stage prod",
     "deploy:func": "sls deploy function --verbose",
     "deploy:func:prod": "sls deploy function --stage prod --verbose",
     "deploy": "sls deploy --verbose",
-    "deploy:prod": "sls deploy --stage prod --verbose"
+    "deploy:prod": "sls deploy --stage prod --verbose",
+    "lint": "eslint ./functions"
   },
   "devDependencies": {
-    "aws-sdk": "^2.101.0",
+    "aws-sdk": "^2.102.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
     "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
     "serverless": "^1.20.2",
     "serverless-offline": "^3.15.3",
-    "serverless-webpack": "^2.2.1",
+    "serverless-webpack": "^2.2.2",
     "webpack": "^3.5.5",
     "webpack-merge": "^4.1.0",
     "webpack-node-externals": "^1.6.0"
@@ -32,5 +43,11 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "source-map-support": "^0.4.16"
+  },
+  "lint-staged": {
+    "functions/**/*.js": [
+      "yarn lint -- --fix",
+      "git add"
+    ]
   }
 }

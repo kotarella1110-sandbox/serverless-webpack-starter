@@ -40,6 +40,12 @@ $ yarn start
 
 Open the URL shown in your browser.
 
+## Lint
+
+```bash
+$ yarn lint
+```
+
 ## Build
 
 ### Development
