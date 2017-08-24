@@ -9,6 +9,8 @@ This starterkit is based on:
     * [Serverless Webpack](https://github.com/elastic-coders/serverless-webpack "elastic-coders/serverless-webpack: Serverless plugin to bundle your lambdas with Webpack")
 * [Webpack3](https://webpack.js.org/ "webpack")
 * [Babel](https://babeljs.io/ "Babel · The compiler for writing next generation JavaScript")
+* [ESLint](https://eslint.org/ "ESLint - Pluggable JavaScript linter")
+* [Prettier](https://prettier.io/ "Prettier · Opinionated Code Formatter")
 
 ## Installation
 
