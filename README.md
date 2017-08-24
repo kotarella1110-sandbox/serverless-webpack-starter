@@ -42,8 +42,16 @@ Open the URL shown in your browser.
 
 ## Build
 
+### Development
+
 ```bash
 $ yarn build
+```
+
+### Production
+
+```bash
+$ yarn build:prod
 ```
 
 ## Deploy

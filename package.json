@@ -10,6 +10,7 @@
     "postinstall": "cp env.example.yml env.yml",
     "start": "sls offline",
     "build": "sls webpack",
+    "build:prod": "sls webpack --stage prod",
     "deploy:func": "sls deploy function --verbose",
     "deploy:func:prod": "sls deploy function --stage prod --verbose",
     "deploy": "sls deploy --verbose",
