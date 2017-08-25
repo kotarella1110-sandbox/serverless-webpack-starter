@@ -11,6 +11,7 @@ This starterkit is based on:
 * [Babel](https://babeljs.io/ "Babel · The compiler for writing next generation JavaScript")
 * [ESLint](https://eslint.org/ "ESLint - Pluggable JavaScript linter")
 * [Prettier](https://prettier.io/ "Prettier · Opinionated Code Formatter")
+* [Jest](https://facebook.github.io/jest/ "Jest · 🃏 Delightful JavaScript Testing")
 
 ## Installation
 
@@ -41,12 +42,6 @@ $ yarn start
 ```
 
 Open the URL shown in your browser.
-
-## Lint
-
-```bash
-$ yarn lint
-```
 
 ## Build
 
@@ -88,6 +83,18 @@ $ yarn deploy:func -- --function functionName
 
 ```bash
 $ yarn deploy:func:prod -- --function functionName
+```
+
+## Lint
+
+```bash
+$ yarn lint
+```
+
+## Test
+
+```bash
+$ yarn test
 ```
 
 ## License
