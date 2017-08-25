@@ -1,6 +1,6 @@
-const webpack = require('webpack');
 const path = require('path');
-const slsw = require("serverless-webpack");
+const webpack = require('webpack');
+const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -12,12 +12,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{
-          loader: 'eslint-loader',
-          options: {
-            fix: true,
+        use: [
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+            },
           },
-        }],
+        ],
         enforce: 'pre',
       },
       {

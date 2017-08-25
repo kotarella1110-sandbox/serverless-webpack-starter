@@ -50,7 +50,7 @@
     "source-map-support": "^0.4.16"
   },
   "lint-staged": {
-    "{src,__tests__}/**/*.js": [
+    "{src,__tests__,webpack}/**/*.js": [
       "yarn lint -- --fix",
       "yarn test",
       "git add"
