@@ -6,11 +6,15 @@
   "plugins": [
     "prettier"
   ],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "prettier/prettier": ["error", {
       "singleQuote": true,
       "trailingComma": "es5"
     }],
-    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 1,
+    "import/prefer-default-export": 1
   }
 }
