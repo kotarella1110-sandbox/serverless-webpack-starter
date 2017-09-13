@@ -1,7 +1,8 @@
 {
   "plugins": [
     "transform-runtime",
-    "transform-strict-mode"
+    "transform-strict-mode",
+    "babel-plugin-source-map-support"
   ],
   "presets": [
     ["env", {
@@ -11,5 +12,17 @@
       },
       "modules": false
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "current",
+            "uglify": true
+          }
+        }]
+      ]
+    }
+  }
 }
