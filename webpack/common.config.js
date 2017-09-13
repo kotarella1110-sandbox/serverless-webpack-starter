@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 
@@ -37,11 +36,4 @@ module.exports = {
     path: path.resolve(__dirname, '../.webpack'),
     filename: '[name].js',
   },
-  plugins: [
-    new webpack.BannerPlugin({
-      banner: 'require("source-map-support").install();',
-      raw: true,
-      entryOnly: false,
-    }),
-  ],
 };

@@ -68,13 +68,8 @@ provider:
     NODE_ENV: ${self:provider.stage}
 
 # you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+package:
+  individual: true
 
 functions:
   hello:
