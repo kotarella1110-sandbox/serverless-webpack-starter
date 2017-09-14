@@ -15,18 +15,18 @@ This starterkit is based on:
 
 ## Installation
 
-Install `yarn` if you don't have.
-
-```bash
-$ npm install -g yarn
-```
-
 Download or clone this repo, then install Node.js using [nvm](https://github.com/creationix/nvm "creationix/nvm: Node Version Manager - Simple bash script to manage multiple active node.js versions").
 
 ```bash
 $ cd to/this/dir
 $ nvm install
 $ nvm use
+```
+
+Install `yarn` if you don't have.
+
+```bash
+$ npm install -g yarn
 ```
 
 Install package.
@@ -71,7 +71,7 @@ $ yarn deploy
 $ yarn deploy:prod
 ```
 
-## Single Function Deploy
+## Deploy Function
 
 ### Development
 
